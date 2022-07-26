@@ -41,3 +41,6 @@ body, html {
     min-height: 400px;
   }
 }
+
+/*Custom Icons */
+.icon-python:before{content:"\f3e2"}
