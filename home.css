@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+body {
+    background-color: #ffffff;
+    margin: auto;
+}
+
+.w3-open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
