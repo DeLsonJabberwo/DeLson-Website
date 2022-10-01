@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DeLson - Portfolio</title>
+        <link href="images/deLson.png" rel="icon" />
+        <link href="w3.css" type="text/css" rel="stylesheet" />
+        <link href="universal.css" type="text/css" rel="stylesheet" />
+        <link href="portfolio.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body class="w3-open-sans">
+
+        <header>
+            <div class="w3-bar w3-text-dark-gray w3-top w3-large">
+                <a href="home.html" class="w3-bar-item w3-button w3-left w3-mobile" style="width: 12%;"><img src="images/deLson.png" style="width: 30%; padding-right: 5%" /><b>DeLson</b></a>
+                <a href="no.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">No</a>
+                <a href="minecraft.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">Minecraft</a>
+                <a href="portfolio.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%"><b>Portfolio</b></a>
+                <a href="home.html" class="w3-bar-item w3-button w3-right w3-mobile w3-text-black" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">Home</a>        
+            </div>
+        </header>
+
+        <section class="w3-container w3-mobile w3-center">
+            <h1 class="w3-xxxlarge" id="title">Portfolio</h1>
+        </section>
+
+        <section class="w3-light-grey">
+            <div class="w3-row">
+                <a href="javascript:void(0)" onclick="openMedium(event, 'Blender');">
+                    <div class="tab-name w3-third tablink w3-bottombar w3-rover-light-grey w3-padding">Blender</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMedium(event, 'Minecraft');">
+                    <div class="tab-name w3-third tablink w3-bottombar w3-rover-light-grey w3-padding">Minecraft</div>
+                </a>
+                <a href="javascript:void(0)" onclick="openMedium(event, 'AI-Images');">
+                    <div class="tab-name w3-third tablink w3-bottombar w3-rover-light-grey w3-padding">AI Images</div>
+                </a>
+            </div>
+
+            <div id="Blender" class="w3-display-container medium" style="display:none">
+                <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
+                <h2 class="medium-header"><b>Blender</b></h2>
+            </div>
+
+            <div id="Minecraft" class="w3-display-container medium" style="display:none">
+                <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
+                <h2 class="medium-header"><b>Minecraft</b></h2>
+            </div>
+
+            <div id="AI-Images"  class="w3-display-container medium" style="display:none">
+                <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
+                <h2 class="medium-header"><b>AI Images</b></h2>
+            </div>
+
+            <div class="w3-container w3-mobile w3-center" id="about">
+                <h2><b>About</b></h2>
+                <div class="w3-row">
+                    <div class="w3-col s3"><p></p></div>
+                    <div class="w3-col s6 w3-justify">
+                        <p>I don't do a lot worth putting here, but every once in a while I can manage something pretty cool.</p>
+                    </div>
+                    <div class="w3-col s3"><p></p></div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function openMedium(evt, medium) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("medium");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+                }
+                document.getElementById(medium).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-border-red";
+            }
+        </script>
+
+    </body>
+</html>
