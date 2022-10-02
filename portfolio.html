@@ -10,12 +10,11 @@
     <body class="w3-open-sans">
 
         <header>
-            <div class="w3-bar w3-text-dark-gray w3-top w3-large">
+            <div class="w3-bar w3-text-dark-gray w3-top w3-large w3-white w3-card">
                 <a href="home.html" class="w3-bar-item w3-button w3-left w3-mobile" style="width: 12%;"><img src="images/deLson.png" style="width: 30%; padding-right: 5%" /><b>DeLson</b></a>
                 <a href="no.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">No</a>
-                <a href="minecraft.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">Minecraft</a>
-                <a href="portfolio.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%"><b>Portfolio</b></a>
-                <a href="home.html" class="w3-bar-item w3-button w3-right w3-mobile w3-text-black" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">Home</a>        
+                <a href="portfolio.html" class="w3-bar-item w3-button w3-right w3-mobile w3-text-black" style="width:7.5%; padding-top: 1%; padding-bottom: 1%"><b>Portfolio</b></a>
+                <a href="home.html" class="w3-bar-item w3-button w3-right w3-mobile" style="width:7.5%; padding-top: 1%; padding-bottom: 1%">Home</a>        
             </div>
         </header>
 
@@ -39,23 +38,299 @@
             <div id="Blender" class="w3-display-container medium" style="display:none">
                 <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
                 <h2 class="medium-header"><b>Blender</b></h2>
+                <div class="w3-row-padding w3-margin-top">
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/tank_kv2.png">
+                            <div class="w3-container">
+                                <h5>KV-2 Tank</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/suzanne_snow.png">
+                            <div class="w3-container">
+                                <h5>Snowy Suzanne</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/suzanne_space.png">
+                            <div class="w3-container">
+                                <h5>Suzanne in Space</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-padding-top-24">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/a_bit_trippy.png">
+                            <div class="w3-container">
+                                <h5>A Bit Trippy</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-padding-top-24">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/simp4K.png">
+                            <div class="w3-container">
+                                <h5>Simp</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-padding-top-24">
+                        <div class="w3-card">
+                            <img src="images/portfolio/blender/dark_cube.png">
+                            <div class="w3-container">
+                                <h5>Dark Cube</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <div id="Minecraft" class="w3-display-container medium" style="display:none">
                 <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
                 <h2 class="medium-header"><b>Minecraft</b></h2>
+                <div class="w3-row-padding w3-margin-top">
+                    <div class="w3-half">
+                        <div class="w3-card">
+                            <div class="w3-content w3-display-container">
+                                <img class="baseSlides" src="images/portfolio/minecraft/1.18_base_1.png">
+                                <img class="baseSlides" src="images/portfolio/minecraft/1.18_base_2.png">
+                                <img class="baseSlides" src="images/portfolio/minecraft/1.18_base_3.png">
+                                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width: 100%">
+                                    <div class="w3-left w3-hover-text-khaki" onclick="plusBaseDivs(-1)">&#10094;</div>
+                                    <div class="w3-right w3-hover-text-khaki" onclick="plusBaseDivs(1)">&#10095;</div>
+                                    <span class="w3-badge base w3-border w3-transparent w3-hover-white" onclick="currentBaseDiv(1)"></span>
+                                    <span class="w3-badge base w3-border w3-transparent w3-hover-white" onclick="currentBaseDiv(2)"></span>
+                                    <span class="w3-badge base w3-border w3-transparent w3-hover-white" onclick="currentBaseDiv(3)"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var slideBaseIndex = 1;
+                                showBaseDivs(slideBaseIndex);
+                                
+                                function plusBaseDivs(n) {
+                                    showBaseDivs(slideBaseIndex += n);
+                                }
+                                
+                                function currentBaseDiv(n) {
+                                    showBaseDivs(slideBaseIndex = n);
+                                }
+                                
+                                function showBaseDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("baseSlides");
+                                    var dots = document.getElementsByClassName("base");
+                                    if (n > x.length) {slideBaseIndex = 1}
+                                    if (n < 1) {slideBaseIndex = x.length}
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                                    }
+                                    x[slideBaseIndex-1].style.display = "block";  
+                                    dots[slideBaseIndex-1].className += " w3-white";
+                                }
+                            </script>
+                            <div class="w3-container">
+                                <h5>1.18.2 Final Base - Capital Ls</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div class="w3-card">
+                            <div class="w3-content w3-display-container">
+                                <img class="jacuzziSlides" src="images/portfolio/minecraft/jacuzzi_1.png">
+                                <img class="jacuzziSlides" src="images/portfolio/minecraft/jacuzzi_2.png">
+                                <img class="jacuzziSlides" src="images/portfolio/minecraft/jacuzzi_3.png">
+                                <img class="jacuzziSlides" src="images/portfolio/minecraft/jacuzzi_4.png">
+                                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width: 100%">
+                                    <div class="w3-left w3-hover-text-khaki" onclick="plusJacuzziDivs(-1)">&#10094;</div>
+                                    <div class="w3-right w3-hover-text-khaki" onclick="plusJacuzziDivs(1)">&#10095;</div>
+                                    <span class="w3-badge jacuzzi w3-border w3-transparent w3-hover-white" onclick="currentJacuzziDiv(1)"></span>
+                                    <span class="w3-badge jacuzzi w3-border w3-transparent w3-hover-white" onclick="currentJacuzziDiv(2)"></span>
+                                    <span class="w3-badge jacuzzi w3-border w3-transparent w3-hover-white" onclick="currentJacuzziDiv(3)"></span>
+                                    <span class="w3-badge jacuzzi w3-border w3-transparent w3-hover-white" onclick="currentJacuzziDiv(4)"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var jacuzziSlideIndex = 1;
+                                showJacuzziDivs(jacuzziSlideIndex);
+                                
+                                function plusJacuzziDivs(n) {
+                                    showJacuzziDivs(jacuzziSlideIndex += n);
+                                }
+                                
+                                function currentJacuzziDiv(n) {
+                                    showJacuzziDivs(jacuzziSlideIndex = n);
+                                }
+                                
+                                function showJacuzziDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("jacuzziSlides");
+                                    var dots = document.getElementsByClassName("jacuzzi");
+                                    if (n > x.length) {jacuzziSlideIndex = 1}
+                                    if (n < 1) {jacuzziSlideIndex = x.length}
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                                    }
+                                    x[jacuzziSlideIndex-1].style.display = "block";  
+                                    dots[jacuzziSlideIndex-1].className += " w3-white";
+                                }
+                            </script>
+                            <div class="w3-container">
+                                <h5>Jacuzzi - Capital Ls</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="AI-Images"  class="w3-display-container medium" style="display:none">
                 <span onclick="this.parentElement.style.display='none'"class="w3-button w3-display-topright">x</span>
                 <h2 class="medium-header"><b>AI Images</b></h2>
+                <div class="w3-row-padding w3-margin-top">
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <div class="w3-content w3-display-container">
+                                <div class="w3-display-container cultSlides">
+                                    <img src="images/portfolio/ai/cult_of_dionysus/wine_and_women_and_wonderful_vices.png">
+                                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-display-hover w3-black w3-opacity-min">
+                                        Wine and women and wonderful vices
+                                    </div>
+                                </div>
+                                <div class="w3-display-container cultSlides">
+                                    <img src="images/portfolio/ai/cult_of_dionysus/you_re_young_and_beautiful__and_i_ll_love_you_always.png">
+                                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-display-hover w3-black w3-opacity-min">
+                                        You're young and beautiful, and I'll love you always
+                                    </div>
+                                </div>
+                                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width: 100%">
+                                    <div class="w3-left w3-hover-text-khaki" onclick="plusCultDivs(-1)">&#10094;</div>
+                                    <div class="w3-right w3-hover-text-khaki" onclick="plusCultDivs(1)">&#10095;</div>
+                                    <span class="w3-badge cult w3-border w3-transparent w3-hover-white" onclick="currentCultDiv(1)"></span>
+                                    <span class="w3-badge cult w3-border w3-transparent w3-hover-white" onclick="currentCultDiv(2)"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var cultSlideIndex = 1;
+                                showCultDivs(cultSlideIndex);
+                                
+                                function plusCultDivs(n) {
+                                    showCultDivs(cultSlideIndex += n);
+                                }
+                                
+                                function currentCultDiv(n) {
+                                    showCultDivs(cultSlideIndex = n);
+                                }
+                                
+                                function showCultDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("cultSlides");
+                                    var dots = document.getElementsByClassName("cult");
+                                    if (n > x.length) {cultSlideIndex = 1}
+                                    if (n < 1) {cultSlideIndex = x.length}
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                                    }
+                                    x[cultSlideIndex-1].style.display = "block";  
+                                    dots[cultSlideIndex-1].className += " w3-white";
+                                }
+                            </script>
+                            <div class="w3-container">
+                                <h5><a href="https://open.spotify.com/track/08KTQSs3ickNki7FFTb6fY?si=46ec8b7ba2fd42c3" target="_blank">The Cult of Dionysus - The Orion Experience</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <div class="w3-content w3-display-container">
+                                <div class="w3-display-container floraSlides">
+                                    <img src="images/portfolio/ai/youre_somebody_else/i_saw_the_part_of_you.png">
+                                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-display-hover w3-black w3-opacity-min">
+                                        I saw the part of you
+                                    </div>
+                                </div>
+                                <div class="w3-display-container floraSlides">
+                                    <img src="images/portfolio/ai/youre_somebody_else/that_only_when_you_re_older__you_will_see_too.png">
+                                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-display-hover w3-black w3-opacity-min">
+                                        That only when you're older, you will see too
+                                    </div>
+                                </div>
+                                <div class="w3-display-container floraSlides">
+                                    <img src="images/portfolio/ai/youre_somebody_else/you_were_the_better_part_of_every_bit_of_beating_heart_i_had.png">
+                                    <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-display-hover w3-black w3-opacity-min">
+                                        You were the better part of every bit of beating heart I had
+                                    </div>
+                                </div>
+                                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width: 100%">
+                                    <div class="w3-left w3-hover-text-khaki" onclick="plusFloraDivs(-1)">&#10094;</div>
+                                    <div class="w3-right w3-hover-text-khaki" onclick="plusFloraDivs(1)">&#10095;</div>
+                                    <span class="w3-badge flora w3-border w3-transparent w3-hover-white" onclick="currentFloraDiv(1)"></span>
+                                    <span class="w3-badge flora w3-border w3-transparent w3-hover-white" onclick="currentFloraDiv(2)"></span>
+                                    <span class="w3-badge flora w3-border w3-transparent w3-hover-white" onclick="currentFloraDiv(3)"></span>
+                                </div>
+                            </div>
+                            <script>
+                                var floraSlideIndex = 1;
+                                showFloraDivs(floraSlideIndex);
+                                
+                                function plusFloraDivs(n) {
+                                    showFloraDivs(floraSlideIndex += n);
+                                }
+                                
+                                function currentFloraDiv(n) {
+                                    showFloraDivs(floraSlideIndex = n);
+                                }
+                                
+                                function showFloraDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("floraSlides");
+                                    var dots = document.getElementsByClassName("flora");
+                                    if (n > x.length) {floraSlideIndex = 1}
+                                    if (n < 1) {floraSlideIndex = x.length}
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" w3-white", "");
+                                    }
+                                    x[floraSlideIndex-1].style.display = "block";  
+                                    dots[floraSlideIndex-1].className += " w3-white";
+                                }
+                            </script>
+                            <div class="w3-container">
+                                <h5><a href="https://open.spotify.com/track/0pdKRp2sUthTPe7RLWpPqQ?si=27470680ec1e47e3" target="_blank">You're Somebody Else - flora cash</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-quarter">
+                        <div class="w3-card w3-display-container">
+                            <img src="images/portfolio/ai/one_last_time.jpg">
+                            <div class="w3-container">
+                                <h5><a href="https://www.wombo.art/listing/766d51f5-9088-4cc5-ba3b-2c93d92afac4" target="_blank">One Last Time</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="w3-container w3-mobile w3-center" id="about">
                 <h2><b>About</b></h2>
                 <div class="w3-row">
                     <div class="w3-col s3"><p></p></div>
-                    <div class="w3-col s6 w3-justify">
+                    <div class="w3-col s6 w3-center">
                         <p>I don't do a lot worth putting here, but every once in a while I can manage something pretty cool.</p>
                     </div>
                     <div class="w3-col s3"><p></p></div>
@@ -78,6 +353,10 @@
                 evt.currentTarget.firstElementChild.className += " w3-border-red";
             }
         </script>
+
+        <footer>
+            <p class="w3-center">Certified by DeLson - 2022</p>
+        </footer>
 
     </body>
 </html>
