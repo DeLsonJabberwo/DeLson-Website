@@ -4,5 +4,6 @@ body {
 }
 
 video {
-    align-items: center;
+    width: 90%;
+    margin-left: 5%;
 }
